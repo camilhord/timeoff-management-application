@@ -1,0 +1,12 @@
+# Terraform
+**.terraform
+*.tfstate*
+*.tfstate
+*.tfplan
+*.terraform*
+
+#vscode
+.vscode/
+
+#Lambdas
+**.zip
