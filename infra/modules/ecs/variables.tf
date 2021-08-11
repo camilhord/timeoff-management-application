@@ -47,16 +47,6 @@ variable alb_enable_access_logs {
   default = false
 }
 
-variable alb_access_logs_bucket_name {
-  type    = string
-  default = null
-}
-
-variable alb_access_logs_s3_prefix {
-  type    = string
-  default = null
-}
-
 variable alb_ingress_allow_cidrs {
   type        = list(string)
   description = "A list of cidrs to allow inbound into timeoff"

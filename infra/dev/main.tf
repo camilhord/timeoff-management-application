@@ -51,11 +51,3 @@ module "timeoff" {
   account_id               = local.account_id
   tags                     = local.tags
 }
-
-# module "vpc-endpoints" {
-#   source  = "../../modules/aws/vpc-endpoints/"
-#   vpc_id          = module.vpc.vpc_id
-#   subnet_id       = module.vpc.private_subnets[0]
-#   route_table_ids = module.vpc.private_route_table_ids
-#   tags            = local.tags
-# }

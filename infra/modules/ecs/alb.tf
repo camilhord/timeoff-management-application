@@ -71,12 +71,7 @@ resource "aws_lb" this {
   security_groups    = [aws_security_group.alb_security_group.id]
   subnets            = var.alb_subnet_ids
 
-  # access_logs {
-  #     bucket  = var.alb_access_logs_bucket_name
-  #     prefix  = var.alb_access_logs_s3_prefix
-  #     enabled = true
-  # }
-  
+
   tags = var.tags
 
 }
