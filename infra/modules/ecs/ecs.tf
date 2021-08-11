@@ -7,7 +7,7 @@ resource "aws_ecs_service" "ecs_service" {
   name                               = "${var.name_prefix}-service"
   cluster                            = aws_ecs_cluster.ecs_cluster.id
   task_definition                    = aws_ecs_task_definition.ecstask.arn
-  desired_count                      = 0
+  desired_count                      = 1
   force_new_deployment               = true
   launch_type                        = "FARGATE"
   platform_version                   = "1.4.0"
