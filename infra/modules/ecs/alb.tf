@@ -92,6 +92,10 @@ resource "aws_lb_target_group" this {
     unhealthy_threshold = 10
   }
 
+  stickiness {
+    type = "lb_cookie"
+  }
+
   tags       = var.tags
   depends_on = [aws_lb.this]
 

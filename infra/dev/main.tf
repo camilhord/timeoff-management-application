@@ -45,8 +45,6 @@ module "timeoff" {
   alb_acm_certificate_arn  = module.acm.this_acm_certificate_arn
   timeoff_cpu              = 256
   timeoff_memory           = 512
-  alb_access_logs_bucket_name = "timeoff-alb-logs"
-  alb_access_logs_s3_prefix = "timeoff"
   region                   = local.region
   account_id               = local.account_id
   tags                     = local.tags
