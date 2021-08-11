@@ -90,7 +90,11 @@ resource "aws_lb_target_group" this {
 
   health_check {
     enabled = true
-    path    = "/login"
+    path    = "/login/"
+    interval = 60
+    timeout = 30
+    healthy_threshold = 2
+    unhealthy_threshold = 10
   }
 
   tags       = var.tags
@@ -138,7 +142,7 @@ resource "aws_lb_listener_rule" redirect_http_to_https {
 
     redirect {
       port        = "443"
-      protocol    = "HTTPS"
+      protocol    = "HTTP"
       status_code = "HTTP_301"
     }
   }

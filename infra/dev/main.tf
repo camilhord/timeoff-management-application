@@ -40,7 +40,7 @@ module "timeoff" {
   name_prefix              = "timeoff"
   vpc_id                   = module.vpc.vpc_id
   timeoff_subnet_ids       = [module.vpc.private_subnets[0], module.vpc.private_subnets[1]]
-  alb_subnet_ids           = [module.vpc.private_subnets[0], module.vpc.private_subnets[1]]
+  alb_subnet_ids           = [module.vpc.public_subnets[0], module.vpc.public_subnets[1]]
   alb_ingress_allow_cidrs  = ["${module.myip.address}/32"]
   alb_acm_certificate_arn  = module.acm.this_acm_certificate_arn
   timeoff_cpu              = 256

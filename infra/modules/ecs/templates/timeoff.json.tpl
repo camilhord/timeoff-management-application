@@ -6,7 +6,7 @@
       "memory": ${memory},
       "memoryReservation": ${memory},
       "environment": [
-        { "name" : "JAVA_OPTS", "value" : "-Djenkins.install.runSetupWizard=false" }
+        { "name" : "ENV_VAR", "value" : "VALUE" }
       ],
       "essential": true,
       "portMappings": [

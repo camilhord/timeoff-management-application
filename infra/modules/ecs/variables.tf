@@ -70,12 +70,12 @@ variable alb_acm_certificate_arn {
 
 variable host_port {
   type    = number
-  default = 3000
+  default = 8080
 }
 
 variable timeoff_port {
   type    = number
-  default = 3000
+  default = 8080
 }
 
 variable region {

@@ -16,10 +16,10 @@
 # --------------------------------------------------------------------
 FROM node:13.0.0-alpine
 
-EXPOSE 3000
+EXPOSE 8080
 
 LABEL org.label-schema.schema-version="1.0"
-LABEL org.label-schema.docker.cmd="docker run -d -p 3000:3000 --name alpine_timeoff"
+LABEL org.label-schema.docker.cmd="docker run -d -p 8080:8080 --name alpine_timeoff"
 
 RUN apk add --no-cache \
     git \
@@ -41,4 +41,4 @@ ENV NODE_ENV production
 RUN npm install mysql
 RUN npm install
 
-CMD npm start
+CMD PORT=8080 npm start
